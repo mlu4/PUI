@@ -1,4 +1,4 @@
-# Assignment 5 HTML and CSS Prototypes
+# Assignment 5 Web HTML and CSS Prototypes
 
 ## Extra Credit Pages
 
