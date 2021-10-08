@@ -414,6 +414,11 @@ a#item_details{
     margin-bottom: 0px;
 }
 
+p#delivers_to{
+    color: #533B22;
+    font-family: 'Bitter', serif;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -545,10 +550,16 @@ a#item_details{
     color: white;
 }
 
-.nav_bar .fa{
+.nav_bar .fa {
     font-size: 20px;
     color: #533B22;
     padding: 0px;
+}
+
+.right_side .fa{
+    font-size: 18px;
+    color: #533B22;
+    padding: 8px 0px 0px;
 }
 
 footer li{
