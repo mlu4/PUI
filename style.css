@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+/****** HOME PAGE STYLING ******/
 .nav_bar{
     display: flex;
     flex-direction: row;
@@ -15,12 +15,21 @@ body{
 }
 
 #nav_logo{
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     color: #533B22;
-    margin-right: 620px;
     text-align: center;
     font-size: 20px;
+}
+
+#nav_logo a{
+    text-decoration: none;
+    color: #533B22
+}
+
+nav ul li:first-child{
+    margin-right: auto;
+    margin-left: 70px;
 }
 
 #nav_logo span{
@@ -52,14 +61,14 @@ body{
     color: #533B22;
     letter-spacing: 3px;
     text-align: right;
-    height: 565px;
+    height: calc(100vh - 112px);
     background-image: url(images/header_6.jpg);
     background-size: cover;
 }
 
 .banner h1{
     font-family: 'Oswald', sans-serif;
-    font-size: 50px;
+    font-size: 65px;
     line-height: 120%;
     font-weight: 1000;
     letter-spacing: 8px;
@@ -109,6 +118,10 @@ button#location{
     border-radius: 4px;
 }
 
+.banner button{
+    font-size: 30px;
+}
+
 .banner p{
     letter-spacing: 1.5px;
     padding-top: 10px;
@@ -135,7 +148,7 @@ button#location{
 .menu p{
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-size: 25px;
+    font-size: 40px;
     letter-spacing: 15px;
     background-color: #DCE9DD;
     padding: 20px;
@@ -143,9 +156,17 @@ button#location{
     font-weight: bold;
 }
 
+.menu_images{
+    margin-top: 80px;
+}
+
 .menu_images img{
     width: 400px;
     padding: 10px 0px;
+}
+
+#menu_pic1{
+    margin-bottom: 100px;
 }
 
 .menu{
@@ -155,19 +176,22 @@ button#location{
 
 .menu li{
     list-style-type: none;
-    line-height: 150%;
+    line-height: 200%;
     margin-top: 19px;
 }
 
 .menu_items, .prices{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 60px;
 }
 
+.menu_items{
+    margin-left: 50px;
+}
+
 .col_2{
-    margin-top: 215px;
-    line-height: 170%;
+    margin-top: 243px;
 }
 
 .vert_text #flavors{
@@ -184,27 +208,44 @@ button#location{
     margin-left: 40px;
 }
 
+/****** ABOUT PAGE STYLING ******/
+
 .about_content{
     color:#533B22;
-    /*background-image: url(images/header_3.jpg);
-    background-size: cover;
-    opacity: 0.9;*/
 }
 
 .about h1{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
-    font-size: 35px;
-    line-height: 33px;
-    letter-spacing: 0.05em;
+    font-size: 40px;
+    letter-spacing: 5px;
     text-align: center;
-    padding-top: 50px;
+    padding: 175px 0px;
+    color: white;
 }
 
-/*.about h1 span{
-    background-color: white;
-    padding: 10px 20px;
-}*/
+.about h1 span{
+    background-color: #533B22;
+    padding: 30px;
+    border: 2px solid white;
+}
+
+.about_content h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+#about_header_img{
+    background-image: url(images/header_3.jpg);
+    background-size: cover;
+    opacity: 0.9;
+    height: 565px;
+}
 
 .about h3, .browse h3, .details h3, .checkout h3{
     font-family: 'Bitter', serif;
@@ -217,13 +258,17 @@ button#location{
     color: #533B22;
 }
 
-.about a, .browse a, .details a, .checkout a{
+.browse a, .details a, .checkout a{
     color:#533B22;
+}
+
+.about h3, .about a{
+    color:white;
 }
 
 .about p{
     text-align: center;
-    padding: 50px 360px;
+    padding: 50px 330px;
     font-size: 20px;
     line-height: 200%;
     letter-spacing: 0.03em;
@@ -241,10 +286,20 @@ button#location{
 .about_images img{
     width: 320px;
     height: 275px;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
     object-fit: cover;
+    border: 2px solid #533B22;
+    border-radius: 2px;
 }
+
+#about_hr{
+   width: 60%;
+   border-top: 1px solid #533B22; 
+   margin: auto;
+}
+
+/****** PRODUCT BROWSING PAGE STYLING ******/
 
 .browse h2{
     text-align: center;
@@ -309,13 +364,11 @@ button.cart{
     font-size: 20px;
 }
 
+/****** PRODUCT DETAIL PAGE STYLING ******/
+
 .product_details{
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-a#item_details{
-    text-decoration: underline;
 }
 
 .left_side{
@@ -381,6 +434,10 @@ a#item_details{
     letter-spacing: 2px;
 }
 
+#add_to_cart:hover{
+    opacity: 0.6;
+}
+
 .dropbtn {
     color: #533B22;
     padding: 10px 168px;
@@ -395,7 +452,6 @@ a#item_details{
     display: none;
     background-color: #f1f1f1;
     width: 438px;
-    margin-left: 131px;
     z-index: 1;
     margin-bottom: 30px;
     text-align: left;
@@ -408,7 +464,10 @@ a#item_details{
     font-size: 14px;
 }
 
-.show {display:block;}
+.show {
+    display: block;
+    margin: auto;
+}
 
 .details_styling{
     margin-bottom: 0px;
@@ -438,18 +497,19 @@ p#delivers_to{
   
 .popup {
     width: 400px;
-    height: 762px;
+    height: 100vh;
     padding: 20px;
     background: #D4EAF1;
-    margin-left: 1000px;
+    float: right;
     color: #533B22;
-    transition: all 5s ease-in-out;
 }
   
 .popup h2 {
     margin-top: 10px;
-    font-family: 'Bitter', serif;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    letter-spacing: 2px;
 }
 
 .popup .close {
@@ -497,11 +557,22 @@ p#delivers_to{
     margin-left: 58px;
 }
 
-.popup#popup_button{
+.popup_buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.popup a#popup_button1, .popup a#popup_button2{
     color: #ffffff;
     background-color: #533B22;
     font-family: 'Roboto', sans-serif;
+    padding: 20px 100px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
 }
+
+/****** OTHER FLAVORS SECTION STYLING ******/
 
 .other_flavors{
     margin-top: 50px;
@@ -540,6 +611,8 @@ p#delivers_to{
     opacity: 0.8;
 }
 
+/****** ICONS STYLING ******/
+
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -561,6 +634,8 @@ p#delivers_to{
     color: #533B22;
     padding: 8px 0px 0px;
 }
+
+/****** FOOTER STYLING ******/
 
 footer li{
     list-style-type: none;
@@ -605,6 +680,9 @@ footer{
     display: flex;
     justify-content: space-evenly;
 }
+
+/****** CONTACT PAGE STYLING ******/
+
 .contact_page{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -678,7 +756,7 @@ label{
     font-family: 'Bitter', serif;
 }
 
-/****** checkout page *******/
+/****** CHECKOUT page *******/
 /* Referenced W3Schools - https://www.w3schools.com/howto/howto_css_checkout_form.asp */
 .row {
     display: flex;

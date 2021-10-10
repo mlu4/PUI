@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans+Condensed|Dancing+Script|Roboto|Oswald">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="html5reset.css">
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -18,7 +20,7 @@
         <header>
             <nav>
                 <ul class="nav_bar">
-                    <li id="nav_logo">BUN BUN <br><span>bake shop</span></li>
+                    <li id="nav_logo"><a href="index.html">BUN BUN <br><span>bake shop</span></a></li>
                     <li class="nav_item"><a class="active_page" href="index.html">HOME</a></li>
                     <li class="nav_item"><a href="about.html">ABOUT</a></li>
                     <li class="nav_item"><a href="browse.html">ORDER</a></li>
@@ -34,7 +36,7 @@
                     <h1>TRY OUR FAMOUS <br> ORIGINAL CINNAMON ROLLS</h1>
                     <h3>Based in Pittsburgh, PA</h3>
                 </div>
-                <button type="button"><a href="browse.html">ORDER ONLINE</a></button>
+                <button type="button" id="order_button">ORDER ONLINE</button>
                 <p>For pickup & shipping!</p>
             </div>
             <h1 id="menu_header">MENU</h1>
@@ -76,10 +78,15 @@
                     </ul>
                 </div>
                 <div class="menu_images">
-                    <img src="images/menu_pic.jpg" alt="Cinnamon Rolls">
+                    <img id="menu_pic1" src="images/menu_pic.jpg" alt="Cinnamon Rolls">
                     <img src="images/menu_pic2.jpg" alt="Cinnamon Roll and Coffee">
                 </div>
             </div>
+        <script>
+            document.querySelector('#order_button').onclick = function() {
+                location.href = "browse.html"
+            }
+        </script>
         </main>
         <footer>
             <div class="hours">

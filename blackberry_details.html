@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans+Condensed|Dancing+Script|Roboto|Oswald">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="images/favicon.png" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="html5reset.css">
@@ -18,7 +20,7 @@
             <header>
                 <nav>
                     <ul class="nav_bar">
-                        <li id="nav_logo">BUN BUN <br><span>bake shop</span></li>
+                        <li id="nav_logo"><a href="index.html">BUN BUN <br><span>bake shop</span></a></li>
                         <li class="nav_item"><a href="index.html">HOME</a></li>
                         <li class="nav_item"><a href="about.html">ABOUT</a></li>
                         <li class="nav_item"><a class="active_page" href="browse.html">ORDER</a></li>
@@ -74,7 +76,7 @@
                             <option value="chocolate">Double-Chocolate</option>
                         </select>
                     </div>
-                    <button><a href="#cart_popup">ADD TO CART</a></button>
+                    <button id="add_to_cart">ADD TO CART</button>
                     <p id="delivers_to"><i class="fa fa-map-marker"></i>Delivers to Pittsburgh, PA</p>
                     <div id="cart_popup" class="overlay">
                         <div class="popup">
@@ -87,8 +89,10 @@
                                 Glaze: <span class="tab"></span>None<br></p>
                             </div>
                             <p id="edit">remove<span class="space"></span>edit</p>
-                            <button><a id="popup_button" href="#">KEEP SHOPPING</a></button>
-                            <button><a id="popup_button" href="checkout.html">CHECKOUT</a></button>
+                            <div class="popup_buttons">
+                                <a id="popup_button1" href="#">KEEP SHOPPING</a>
+                                <a id="popup_button2" href="checkout.html">CHECKOUT</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,23 +102,23 @@
                 <div class="slideshow">
                     <div class="individual" id="orig">
                         <img src="images/browse_image.jpg" alt="Original Bun">
-                        <figcaption>Original Cinnamon Bun</figcaption>
+                        <p>Original Cinnamon Bun</p>
                     </div>
                     <div class="individual" id="caramel">
                         <img src="images/caramel_pecan_bun.jpg" alt="Caramel Pecan Bun">
-                        <figcaption>Caramel Pecan Cinnamon Bun</figcaption>
+                        <p>Caramel Pecan Cinnamon Bun</p>
                     </div>
                     <div class="individual" id="walnut">
                         <img src="images/walnut.jpg" alt="Walnut Bun">
-                        <figcaption>Walnut Cinnamon Bun</figcaption>
+                        <p>Walnut Cinnamon Bun</p>
                     </div>
                     <div class="individual" id="gf">
                         <img src="images/original_gf.jpg" alt="Original GF Bun">
-                        <figcaption>Original (GF) Cinnamon Bun</figcaption>
+                        <p>Original (GF) Cinnamon Bun</p>
                     </div>
                     <div class="individual" id="ps">
                         <img src="images/pumpkin_spice.jpg" alt="Pumpkin Spice Bun">
-                        <figcaption>Pumpkin Spice Cinnamon Bun</figcaption>
+                        <p>Pumpkin Spice Cinnamon Bun</p>
                     </div>
                 </div>
             </div>
@@ -139,7 +143,11 @@
 
             document.querySelector('.dropbtn').addEventListener('click', () => {
                 document.querySelector('.dropbtn').classList.add('details_styling');
-            }); 
+            });
+
+            document.querySelector('#add_to_cart').onclick = function() {
+                location.href = "#cart_popup"
+            }
 
             document.querySelector('#orig').onclick = function() {
                 location.href = "original_details.html"

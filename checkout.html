@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans+Condensed|Dancing+Script|Roboto|Oswald">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="images/favicon.png" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="html5reset.css">
@@ -18,7 +20,7 @@
             <header>
                 <nav>
                     <ul class="nav_bar">
-                        <li id="nav_logo">BUN BUN <br><span>bake shop</span></li>
+                      <li id="nav_logo"><a href="index.html">BUN BUN <br><span>bake shop</span></a></li>
                         <li class="nav_item"><a href="index.html">HOME</a></li>
                         <li class="nav_item"><a href="about.html">ABOUT</a></li>
                         <li class="nav_item"><a class="active_page" href="browse.html">ORDER</a></li>
@@ -28,6 +30,7 @@
                 </nav>
             </header>
             <h3><a href="index.html">Home</a> / Checkout</h3>
+            <!--Referenced from https://www.w3schools.com/howto/howto_css_checkout_form.asp-->
             <div class="row">
                 <div class="payment_info">
                   <div class="container">
@@ -57,7 +60,6 @@
                             </div>
                           </div>
                         </div>
-              
                         <div class="checkout_col2">
                           <h3>Payment</h3>
                           <br><br>
@@ -67,7 +69,6 @@
                           <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                           <label for="expmonth">Exp Month<span class="required">*</span></label>
                           <input type="text" id="expmonth" name="expmonth" placeholder="September">
-              
                           <div class="row">
                             <div class="col-50">
                               <label for="expyear">Exp Year<span class="required">*</span></label>
@@ -88,7 +89,6 @@
                               <p>Total <span class="price"><b>$5</b></span></p>
                               <input type="submit" value="PLACE ORDER" class="btn">
                             </div>
-                          </div>
                         </div>
                       </div>
                       <label>
@@ -97,6 +97,7 @@
                     </form>
                   </div>
                 </div>
+            </div>
         </main>
         <footer>
             <div class="hours">
